@@ -5,6 +5,7 @@ const INITIAL_VALUE = {
 };
 
 const counterReducer = (store = INITIAL_VALUE, action) => {
+  console.log("Action Received", action);
   return store;
 };
 
