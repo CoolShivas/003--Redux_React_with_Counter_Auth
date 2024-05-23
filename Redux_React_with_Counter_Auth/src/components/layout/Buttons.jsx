@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux";
+import { counterActions } from "../store";
 
 const Buttons = () => {
 
     const dispatch = useDispatch();
 
     const handlerOnAddBtn = () => {
-        dispatch({
-            type: "ADDITION"
-        })
+        // dispatch({
+        //     type: "ADDITION"
+        // })
+        console.log(counterActions.addition());
     };
 
     const handlerOnSubtractBtn = () => {
