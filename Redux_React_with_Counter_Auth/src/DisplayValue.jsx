@@ -5,7 +5,7 @@ const DisplayValue = () => {
     const value = useSelector(store => store.count);
 
     return (
-        <p className="fs-5 mb-4">
+        <p className="bg-white fs-5 mb-4">
             Counter Value is = {value}.
         </p>
     )
