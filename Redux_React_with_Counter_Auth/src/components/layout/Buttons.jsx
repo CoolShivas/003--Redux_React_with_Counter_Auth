@@ -14,9 +14,10 @@ const Buttons = () => {
     };
 
     const handlerOnSubtractBtn = () => {
-        dispatch({
-            type: "SUBTRACTION"
-        })
+        // dispatch({
+        //     type: "SUBTRACTION"
+        // })
+        dispatch(counterActions.substraction());
     };
 
     const handlerOnTogglerBtn = () => {

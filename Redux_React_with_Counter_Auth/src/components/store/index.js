@@ -39,10 +39,12 @@ const counterSlice = createSlice({
   initialState: { counterVal: 0 },
   reducers: {
     addition: (currState, action) => {
-      currState.counterVal++;
+      // currState.counterVal++;
+      currState.counterVal = currState.counterVal + 5;
     },
     substraction: (currState, action) => {
-      console.log(currState, action);
+      // console.log(currState, action);
+      currState.counterVal = currState.counterVal - 5;
     },
   },
 });
