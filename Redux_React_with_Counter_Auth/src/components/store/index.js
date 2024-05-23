@@ -32,7 +32,16 @@
 
 ///////************************************************************************************* */
 
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
+
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: { counterVal: 0 },
+  reducers: {
+    addition: (currState, action) => {},
+    substraction: (currState, action) => {},
+  },
+});
 
 const counterStore = configureStore({});
 
