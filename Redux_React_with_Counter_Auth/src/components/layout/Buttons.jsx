@@ -9,7 +9,8 @@ const Buttons = () => {
         // dispatch({
         //     type: "ADDITION"
         // })
-        console.log(counterActions.addition());
+        // console.log(counterActions.addition());
+        dispatch(counterActions.addition());
     };
 
     const handlerOnSubtractBtn = () => {

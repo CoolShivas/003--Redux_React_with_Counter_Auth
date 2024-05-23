@@ -12,7 +12,8 @@ const App = () => {
       <div className="py-5">
         <AppName></AppName>
         <div className="col-lg-6 mx-auto">
-          {!showButton ? "" : <DisplayValue></DisplayValue>}
+          {/* {!showButton ? "" : <DisplayValue></DisplayValue>} */}
+          <DisplayValue></DisplayValue>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <Buttons></Buttons>
           </div>
