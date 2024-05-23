@@ -1,25 +1,31 @@
-import Buttons from "./components/layout/Buttons";
-import DisplayValue from "./DisplayValue";
-import AppName from "./components/header/AppName";
-import { useSelector } from "react-redux";
+import ReactRedux from "./components/main/ReactRedux";
+import MySeals from "./components/pages/MySeals";
+import MyProducts from "./components/pages/MyProducts";
+import UserProfilePage from "./components/pages/UserProfilePage";
+import LogOutPage from "./components/pages/LogOutPage";
+import LogInPage from "./components/pages/LogInPage";
+import DashBoard from "./components/pages/DashBoard";
+import { Switch, Route } from "react-router-dom/cjs/react-router-dom.min";
+import ReduxTool from "./components/navigation/ReduxTool";
+
 
 const App = () => {
 
   // const showButton = useSelector(store => store.showButton);
-  const showButton = useSelector(store => store.hide);
+
 
   return (<>
-    <div className="bg-dark text-secondary px-4 py-5 text-center">
-      <div className="py-5">
-        <AppName></AppName>
-        <div className="col-lg-6 mx-auto">
-          {showButton ? "" : <DisplayValue></DisplayValue>}
-          <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <Buttons></Buttons>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Switch>
+      <Route exact path="/"> <ReduxTool></ReduxTool> </Route>
+      <Route path="/login"> <LogInPage></LogInPage> </Route>
+      <Route path="/logout"> <LogOutPage></LogOutPage> </Route>
+      <Route path="/userprofile"> <UserProfilePage></UserProfilePage> </Route>
+      <Route path="/dashboard"> <DashBoard></DashBoard> </Route>
+      <Route path="/products"> <MyProducts></MyProducts> </Route>
+      <Route path="/sells"> <MySeals></MySeals> </Route>
+      <Route path="/counter"> <ReactRedux></ReactRedux> </Route>
+    </Switch>
+
   </>
   )
 }
