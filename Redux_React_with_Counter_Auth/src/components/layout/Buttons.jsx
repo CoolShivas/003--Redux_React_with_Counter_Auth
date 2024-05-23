@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { counterActions } from "../store";
+import { counterActions, showButtonActions } from "../store";
 
 const Buttons = () => {
 
@@ -21,9 +21,10 @@ const Buttons = () => {
     };
 
     const handlerOnTogglerBtn = () => {
-        dispatch({
-            type: "TOGGLER_BUTTON"
-        })
+        // dispatch({
+        //     type: "TOGGLER_BUTTON"
+        // })
+        dispatch(showButtonActions.toggler());
     };
 
     return (

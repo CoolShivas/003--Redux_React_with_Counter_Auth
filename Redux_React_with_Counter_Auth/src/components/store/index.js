@@ -32,7 +32,17 @@
 
 ///////************************************************************************************* */
 
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice, current } from "@reduxjs/toolkit";
+
+const showButtonSlice = createSlice({
+  name: "hidden",
+  initialState: false,
+  reducers: {
+    toggler: (currState, action) => {
+      return (currState = !currState);
+    },
+  },
+});
 
 const counterSlice = createSlice({
   name: "counter",
@@ -52,9 +62,10 @@ const counterSlice = createSlice({
 const counterStore = configureStore({
   reducer: {
     counter: counterSlice.reducer,
+    hide: showButtonSlice.reducer,
   },
 });
 
 export const counterActions = counterSlice.actions;
-
+export const showButtonActions = showButtonSlice.actions;
 export default counterStore;
