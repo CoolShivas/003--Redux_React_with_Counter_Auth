@@ -1,0 +1,10 @@
+.navlink {
+  /* background-color: orange; */
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.center_container {
+  margin: 150px;
+}

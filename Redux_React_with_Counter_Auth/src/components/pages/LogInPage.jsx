@@ -1,8 +1,26 @@
-
+import { useState } from "react";
+import styles from "./LogInPage.module.css";
 
 const LogInPage = () => {
+
+
+
     return (
-        <h1> WelCome to Login Page. </h1>
+        <main className={styles.auth}>
+            <section>
+                <form>
+                    <div className={styles.control}>
+                        <label htmlFor='email'>Email</label>
+                        <input type='email' id='email' />
+                    </div>
+                    <div className={styles.control}>
+                        <label htmlFor='password'>Password</label>
+                        <input type='password' id='password' />
+                    </div>
+                    <button>Login</button>
+                </form>
+            </section>
+        </main>
     )
 }
 
